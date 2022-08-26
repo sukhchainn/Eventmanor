@@ -1,0 +1,2 @@
+# Eventmanor
+Event Managing App
