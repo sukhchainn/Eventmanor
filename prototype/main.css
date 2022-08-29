@@ -1,0 +1,321 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+}
+.flex {
+    display: flex;
+}
+
+/* Type Setting */
+h1, h2, h3, p, span, a, b {
+    font-family: Verdana, sans-serif;
+}
+/* Type Setting ends here */
+
+/* Elements Setting */
+button {
+    padding: 1em;
+    font-size: medium;
+    color: white;
+    background-color: #1363de;
+    border: 0;
+    border-radius: 1em;
+    box-shadow: 0em 0.1em 0.1em 0em #0f0d0d79;
+}
+button:focus {
+    color:rgba(255, 255, 255, 0.5);
+} button:active {
+    color:rgba(255, 255, 255, 0.5);
+    box-shadow: 0em 0em 0em 0em #0f0d0d;
+}
+/* Elements Setting ends here */
+
+/* Header starts here */
+header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0;
+    padding: 3em;
+    color: #0f0d0d;
+    background: url("assets/pexels-krivec-ales-551853.jpg") fixed;
+    background-size: cover;
+}
+header b {
+    font-weight: bolder;
+    font-size: 4.5rem;
+    line-height: 14px;
+    color: #1363de;
+}
+header i {
+    font-weight: bolder;
+    font-size: 3rem;
+    line-height: 14px;
+    color: #1363de;
+}
+.journey-details {
+    max-width: 15em;
+    padding: 2em;
+    border-radius: 1em;
+    background: rgba(255, 255, 255, 0.5);
+}
+.time {
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 14px;
+    /* color: #451a00; */
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 1em;
+    padding: 1em;
+    border-radius: 1em;
+    background: rgba(255, 255, 255, 0.5);
+}
+nav a {
+    text-decoration: none;
+    text-shadow: 0.4px 0.4px #1363de;
+    color: #1363de;
+}
+nav a:last-child {
+    margin-right: 0;
+}
+nav a:hover, nav a:focus {
+    color: #1363de;
+    text-shadow: none;
+}
+
+@media (min-width: 800px) {
+    header {
+        padding-left: 5em;
+        flex-direction: row;
+    }
+    nav {
+        width: auto;
+        padding: 2em;
+        margin-top: 0;
+        flex-direction: row;
+    }
+    nav a {
+        margin-right: 1em;
+    }
+}
+/* Header ends here */
+
+/* Section starts here */
+section {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: #0f0d0d;
+    color: white;
+}
+section p {
+    margin: 2em;
+}
+
+@media (min-width: 800px) {
+    section {
+        flex-direction: row;
+    }
+    section p{
+        width: 30%;
+    }
+}
+/* Section ends here */
+
+/* Main starts here */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding-top: 2em;
+}
+main h2 {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+main button {
+    margin-bottom: 4em;
+}
+
+.attractions {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    width: 100%;
+}
+.attraction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 1em; */
+    border-radius: 1em;
+}
+.attraction img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    transition: opacity .2s ease-in-out;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position: left;
+}
+.attraction:hover img, .attraction:focus img {
+    opacity: 1;
+}
+/* .attraction:hover b, .attraction:focus b {
+    visibility: hidden;
+} */
+.attraction b {
+    position: absolute;
+    font-size: 15rem;
+    opacity: 0.2;
+}
+.attraction b:last-child {
+    opacity: 0.4;
+}
+#first, #second, #third, #fourth, #fifth {
+    width: 100%;
+    height: 40em;
+    box-sizing: border-box;
+}
+#first {
+    background-color: #ddded7;
+} #second {
+    background-color: #f2f5ef;
+} #third {
+    background-color: #f2f3ee;
+} #fourth {
+    background-color: #f8f9f4;
+}
+#fifth {
+    background-color: #1363de;
+}
+
+.our-guides {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 8em;
+    padding-bottom: 8em;
+    padding-left: 2em;
+    padding-right: 2em;
+    color: white;
+    background-color: #0f0d0d;
+}
+.our-guides img {
+    order: -1;
+    width: 100%;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position: left;
+}
+.our-guides-about {
+    width: 100%;
+}
+
+@media (min-width: 800px) {
+    .attractions {
+        width: 100em;
+        height: 43em;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    #first, #second, #third, #fourth {
+        width: 20em;
+        height: 20em;
+    }
+    #fifth {
+        width: 100%;
+        height: 41.5em;
+    }
+    .first-four {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .our-guides {
+        flex-direction: row;
+    }
+    .our-guides img {
+        order: 0;
+        width: 45%;
+    }
+    .our-guides-about {
+        width: 45%;
+    }
+}
+/* Main ends here */
+
+/* Footer starts here */
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0;
+    padding: 2em;
+    color: white;
+    background-color: #1363de;
+}
+footer a {
+    color: white;
+}
+
+.contact-us ,
+.about-us ,
+.social-media {
+    width: 100%;
+}
+.social-media-items {
+    display: flex;
+}
+.icon {
+    display: flex;
+    height: 2em;
+    margin-right: 0.5em;
+}
+.social-media input {
+    margin-top: 2em;
+    width: 15em;
+    height: 4em;
+    border: none;
+    border-radius: 1em 0em 0em 1em;
+}
+.social-media a {
+    box-sizing: border-box;
+    display: flex;
+    padding-left: 0.5em;
+    padding-right: 1em;
+    align-items: center;
+    position: relative;
+    top: 12px;
+    /* right: 4px;  */
+    height: 3.5em;
+    border: none;
+    background-color: #0f0d0d;
+    border-radius: 0em 1em 1em 0em;
+}
+
+@media (min-width: 800px) {
+    footer {
+        flex-direction: row;
+    }
+    .contact-us, .about-us, .social-media {
+        width: 30%;
+    }
+}
+/* Footer ends here */
