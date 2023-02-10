@@ -70,6 +70,7 @@ header i {
 
 nav {
     display: flex;
+    position: sticky;
     flex-direction: column;
     align-items: center;
     position: sticky;
@@ -99,6 +100,7 @@ nav a:hover, nav a:focus {
         flex-direction: row;
     }
     nav {
+        position: relative;
         width: auto;
         padding: 2em;
         margin-top: 0;
@@ -192,15 +194,20 @@ main button {
     box-sizing: border-box;
 }
 #first {
+    margin-bottom: 1em;
     background-color: #ddded7;
 } #second {
+    margin-bottom: 1em;
     background-color: #f2f5ef;
 } #third {
+    margin-bottom: 1em;
     background-color: #f2f3ee;
 } #fourth {
+    margin-bottom: 1em;
     background-color: #f8f9f4;
 }
 #fifth {
+    margin-bottom: 1em;
     background-color: #1363de;
 }
 
